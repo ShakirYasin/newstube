@@ -1,8 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Navbar from "./components/Navbar";
-import Card from "./components/SingleNews";
+import AllNews from "./components/AllNews";
 import './css/App.css'
 
 
@@ -12,12 +11,11 @@ const App = () => {
     <>
       <Router>
         <Navbar />
-        <Card />
-        <Routes>
-          <Route path='/' />
-          <Route path='/reports'/>
-          <Route path='/products'/>
-        </Routes>
+          <Routes>
+            <Route path='/' element={<AllNews />}/>
+            <Route path='/news'/>
+            <Route path='/library'/>
+          </Routes>
       </Router>
     </>
   )
